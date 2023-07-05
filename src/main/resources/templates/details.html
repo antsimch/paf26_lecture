@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div th:each="show : ${shows}">
+            <div>
+                <p>
+                    Name:
+                    <span th:text="${show.name}"></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Type:
+                    <span th:text="${show.type}"></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Runtime:
+                    <span th:text="${show.runtime}"></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Genres:
+                    <span th:text="${show.genres}"></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    Rating:
+                    <span th:text="${show.rating}"></span>
+                </p>
+            </div>
+            <hr>
+        </div>
+        <form action="#" method="GET" th:action="@{/}">
+            <button type="submit">Back</button>
+        </form>
+    </body>
+</html>
